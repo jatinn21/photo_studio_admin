@@ -1,6 +1,6 @@
+import { Outlet, Link } from "react-router-dom";
 import profile from "../Asset/profile.jpg";
-// import Profile from "./Profile_section";
-import Dashboard from "./Dashboard";
+
 const Home = () => {
   return (
     <div className="body">
@@ -12,13 +12,21 @@ const Home = () => {
       </nav>
       <div className="container">
         <div className="sidebar">
-          <span className="menuLink">Dashboard</span>
-          <span className="menuLink">Profile</span>
-          <span className="menuLink">Images</span>
-          <span className="menuLink">Logout</span>
+          <Link to="/Dashboard" className="menuLink">
+            Dashboard
+          </Link>
+          <Link to="/Profile" className="menuLink">
+            Profile
+          </Link>
+          <Link to="/Images" className="menuLink">
+            Images
+          </Link>
+          <Link to="/Logout" className="menuLink">
+            Logout
+          </Link>
         </div>
         <div className="main">
-          <Dashboard />
+          <Outlet />
         </div>
       </div>
     </div>

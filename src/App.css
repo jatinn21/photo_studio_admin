@@ -76,7 +76,7 @@ nav div span {
   width: 80%;
 }
 
-.sidebar span.menuLink {
+.sidebar .menuLink {
   height: max-content;
   width: 100%;
   font-size: 2rem;
@@ -88,15 +88,15 @@ nav div span {
   transition: all ease 0.9s;
 }
 
-.sidebar span.menuLink:last-child {
+.sidebar .menuLink:last-child {
   color: red;
 }
 
-.sidebar span.menuLink:last-child:hover {
+.sidebar .menuLink:last-child:hover {
   color: rgba(255, 0, 0, 0.66);
 }
 
-.sidebar span.menuLink:hover {
+.sidebar .menuLink:hover {
   opacity: 0.7;
   color: rgb(130, 130, 130);
   transform: scale(1.2);
@@ -110,6 +110,7 @@ nav div span {
 
 .main_container_top {
   height: 10%;
+  margin: 2% 0;
   align-items: center;
   font-size: 2rem;
   font-weight: 800;
@@ -118,8 +119,12 @@ nav div span {
 }
 
 .main_container_bottom {
+  /* margin: 1% 0; */
+  height: max-content;
   font-size: 2rem;
   font-family: appleFont;
+  display: flex;
+  flex-direction: column;
 }
 
 .admin_profile_form_field {
@@ -133,6 +138,7 @@ nav div span {
   width: 100%;
   align-items: center;
   flex-direction: column;
+  gap: 3rem;
 }
 
 .admin_profile_form_label {
@@ -179,7 +185,7 @@ nav div span {
 }
 
 .numberCards {
-  height: 35%;
+  height: 30%;
   display: flex;
   align-items: center;
   /* padding: 2rem; */
@@ -187,7 +193,7 @@ nav div span {
 }
 
 .numberCard {
-  height: 15rem;
+  height: 10rem;
   width: 30%;
   background-color: rgba(234, 229, 229, 0.932);
   border-radius: 1rem;
@@ -198,14 +204,14 @@ nav div span {
 .card_number {
   height: 70%;
   width: 100%;
-  font-size: 6rem;
+  font-size: 4rem;
   display: flex;
   align-items: center;
   font-weight: 900;
 }
 
 .card_title {
-  height: 20%;
+  height: max-content;
   width: 100%;
   font-size: larger;
   font-weight: 900;
@@ -213,23 +219,52 @@ nav div span {
 
 .applicantCards {
   height: 75%;
-  padding: 2.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-  gap: 4rem;
 }
 
 .graph {
-  margin-top: 1rem;
-  font-size: 2rem;
-  height: 60%;
-  width: 80%;
-  /*
+  font-size: 1rem;
   height: max-content;
-  width: 100%;
-  border: 1px solid red; */
+  margin: 5%;
+  padding: 0 5rem;
+  max-width: 100%;
+}
+
+/* Images.js */
+.fileUploader {
+  height: 60vh;
+  margin: 4rem;
+  background-color: rgb(168, 167, 167);
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.fileUploader .blackFrame {
+  margin-top: 3%;
+  height: 80%;
+  width: 95%;
+  background-color: rgb(6, 6, 5);
+}
+
+.fileUploader .imageInput {
+  font-family: appleFont;
+}
+
+::-webkit-file-upload-button {
+  content: "Click me !important";
+  font-family: appleFont;
+  padding: 1rem;
+  color: black;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 2rem;
 }
 
 /* .progressbar {
